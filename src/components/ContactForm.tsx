@@ -39,7 +39,7 @@ export default function ContactForm() {
   };
 
   return (
-    <main className="max-w-md mx-auto px-4 py-12 flex flex-col gap-8 items-center">
+    <div className="max-w-md mx-auto px-4 py-12 flex flex-col gap-8 items-center">
       <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-800 text-center">Contact</h1>
       <form className="w-full flex flex-col gap-4 bg-white rounded-xl shadow p-6" onSubmit={handleSubmit}>
         <label htmlFor="name" className="font-semibold text-blue-800">Nom</label>
@@ -82,13 +82,15 @@ export default function ContactForm() {
         >
           {sending ? "Envoi en cours..." : "Envoyer"}
         </button>
-        {sent && <p className="text-green-600 text-sm mt-1">Message envoyé !</p>}
-        {error && <p className="text-red-600 text-sm mt-1">{error}</p>}
+        <div aria-live="polite" className="min-h-[1.5em]">
+          {sent && <p className="text-green-600 text-sm mt-1">Message envoyé !</p>}
+          {error && <p className="text-red-600 text-sm mt-1">{error}</p>}
+        </div>
       </form>
       <div className="text-sm text-blue-800 text-center mt-4">
         Ce formulaire utilise <b>EmailJs</b> pour envoyer vos messages directement par e-mail.<br/>
         <span className="text-xs text-gray-500">(Aucune donnée n&apos;est stockée sur le site)</span>
       </div>
-    </main>
+    </div>
   );
 } 

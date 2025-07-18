@@ -29,7 +29,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-10">
+    <div className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-10">
       {/* Titre */}
       <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-800 text-center mb-2">À propos</h1>
 
@@ -111,6 +111,6 @@ export default function About() {
 
       {/* Appel à l’action */}
       <div className="text-center text-sm text-gray-500 mt-4">Pour un devis personnalisé ou toute question, rendez-vous sur la page <a href="/contact" className="text-blue-800 underline hover:text-blue-900">Contact</a>.</div>
-    </main>
+    </div>
   );
 } 
