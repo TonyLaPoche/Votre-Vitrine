@@ -1,5 +1,32 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Services – Création de site vitrine, refonte, maintenance | Antoine Terrade",
+  description: "Sites vitrines, refonte, maintenance, référencement naturel. Solutions adaptées à votre budget en Haute-Savoie et Grand Genève.",
+  openGraph: {
+    title: "Services – Création de site vitrine, refonte, maintenance | Antoine Terrade",
+    description: "Sites vitrines, refonte, maintenance, référencement naturel. Solutions adaptées à votre budget en Haute-Savoie et Grand Genève.",
+    url: "https://votrevitrine.vercel.app/services",
+    siteName: "Votre Vitrine",
+    images: [
+      {
+        url: "/profilAntoine.webp",
+        width: 800,
+        height: 600,
+        alt: "Photo d’Antoine Terrade, développeur web Haute-Savoie",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services – Création de site vitrine, refonte, maintenance | Antoine Terrade",
+    description: "Sites vitrines, refonte, maintenance, référencement naturel. Solutions adaptées à votre budget en Haute-Savoie et Grand Genève.",
+    images: ["/profilAntoine.webp"],
+  },
+};
+
 export default function Services() {
   return (
     <main className="max-w-2xl mx-auto px-4 py-8 flex flex-col gap-10">
