@@ -37,7 +37,7 @@ export default function About() {
       <section className="flex flex-col items-center text-center gap-3">
         <Image
           src="/profilAntoine.webp"
-          alt="Photo de profil Antoine"
+          alt="Photo d’Antoine Terrade, développeur site vitrine Haute-Savoie"
           width={120}
           height={120}
           className="rounded-full shadow-lg border-4 border-blue-800 object-cover mb-2"
