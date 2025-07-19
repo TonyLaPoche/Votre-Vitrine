@@ -33,9 +33,9 @@ export default function RootLayout({
       >
         <DemoRibbon />
         <Header />
-        <div className="pt-14 min-h-[80vh] flex flex-col">
+        <main className="pt-14 min-h-[80vh] flex flex-col">
           {children}
-        </div>
+        </main>
         <ScrollToTopButton />
         <Footer />
       </body>

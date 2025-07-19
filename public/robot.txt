@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://votrevitrine.vercel.app/sitemap.xml

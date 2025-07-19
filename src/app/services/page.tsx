@@ -1,10 +1,38 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Services – Création de site vitrine, refonte, maintenance | Antoine Terrade",
+  description: "Sites vitrines, refonte, maintenance, référencement naturel. Solutions adaptées à votre budget en Haute-Savoie et Grand Genève.",
+  openGraph: {
+    title: "Services – Création de site vitrine, refonte, maintenance | Antoine Terrade",
+    description: "Sites vitrines, refonte, maintenance, référencement naturel. Solutions adaptées à votre budget en Haute-Savoie et Grand Genève.",
+    url: "https://votrevitrine.vercel.app/services",
+    siteName: "Votre Vitrine",
+    images: [
+      {
+        url: "/profilAntoine.webp",
+        width: 800,
+        height: 600,
+        alt: "Photo d’Antoine Terrade, développeur web Haute-Savoie",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services – Création de site vitrine, refonte, maintenance | Antoine Terrade",
+    description: "Sites vitrines, refonte, maintenance, référencement naturel. Solutions adaptées à votre budget en Haute-Savoie et Grand Genève.",
+    images: ["/profilAntoine.webp"],
+  },
+};
+
 export default function Services() {
   return (
-    <main className="max-w-2xl mx-auto px-4 py-8 flex flex-col gap-10">
+    <div className="max-w-2xl mx-auto px-4 py-8 flex flex-col gap-10">
       {/* Section démos */}
       <section className="flex flex-col gap-4 items-center text-center">
+      <h1 className="sr-only">Services – Création de site vitrine, refonte, maintenance</h1>
         <h2 className="text-xl font-bold text-blue-800">Sites en démo</h2>
         <ul className="flex flex-col gap-4 w-full">
           <li className="bg-[#e6f0fa] border border-blue-300 rounded-lg p-4 shadow flex flex-col sm:flex-row items-center gap-4">
@@ -41,6 +69,6 @@ export default function Services() {
           className="rounded-lg shadow max-w-full h-auto"
         />
       </section>
-    </main>
+    </div>
   );
 } 

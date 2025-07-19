@@ -1,8 +1,35 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "À propos – Antoine Terrade, développeur de site vitrine à Thonon et Grand Genève",
+  description: "Découvrez le parcours, les valeurs et l’expertise d’Antoine Terrade, créateur de sites vitrines modernes et abordables en Haute-Savoie et Grand Genève.",
+  openGraph: {
+    title: "À propos – Antoine Terrade, développeur de site vitrine à Thonon et Grand Genève",
+    description: "Découvrez le parcours, les valeurs et l’expertise d’Antoine Terrade, créateur de sites vitrines modernes et abordables en Haute-Savoie et Grand Genève.",
+    url: "https://votrevitrine.vercel.app/about",
+    siteName: "Votre Vitrine",
+    images: [
+      {
+        url: "/profilAntoine.webp",
+        width: 800,
+        height: 600,
+        alt: "Photo d’Antoine Terrade, développeur web Haute-Savoie",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "À propos – Antoine Terrade, développeur de site vitrine à Thonon et Grand Genève",
+    description: "Découvrez le parcours, les valeurs et l’expertise d’Antoine Terrade, créateur de sites vitrines modernes et abordables en Haute-Savoie et Grand Genève.",
+    images: ["/profilAntoine.webp"],
+  },
+};
+
 export default function About() {
   return (
-    <main className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-10">
+    <div className="max-w-2xl mx-auto px-4 py-10 flex flex-col gap-10">
       {/* Titre */}
       <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-800 text-center mb-2">À propos</h1>
 
@@ -10,7 +37,7 @@ export default function About() {
       <section className="flex flex-col items-center text-center gap-3">
         <Image
           src="/profilAntoine.webp"
-          alt="Photo de profil Antoine"
+          alt="Photo d’Antoine Terrade, développeur site vitrine Haute-Savoie"
           width={120}
           height={120}
           className="rounded-full shadow-lg border-4 border-blue-800 object-cover mb-2"
@@ -84,6 +111,6 @@ export default function About() {
 
       {/* Appel à l’action */}
       <div className="text-center text-sm text-gray-500 mt-4">Pour un devis personnalisé ou toute question, rendez-vous sur la page <a href="/contact" className="text-blue-800 underline hover:text-blue-900">Contact</a>.</div>
-    </main>
+    </div>
   );
 } 
